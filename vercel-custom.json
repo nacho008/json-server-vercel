@@ -652,6 +652,26 @@
             "type": "string",
             "maxLength": 4096
           },
+          "headers": {
+            "description": "An array of key/value pairs representing each response header.",
+            "type": "array",
+            "maxItems": 1024,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["key", "value"],
+              "properties": {
+                "key": {
+                  "type": "string",
+                  "maxLength": 4096
+                },
+                "value": {
+                  "type": "string",
+                  "maxLength": 4096
+                }
+              }
+            }
+          },
           "has": {
             "description": "An array of requirements that are needed to match",
             "type": "array",
